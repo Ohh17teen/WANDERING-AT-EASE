@@ -1,0 +1,116 @@
+/* 卡片主容器 */
+.fish-card {
+    position: fixed;
+    width: 420px;             /* 卡片宽度（可按需微调）*/
+    max-width: 92%;
+    max-height: 80vh;        /* 防止超屏，内部滚动 */
+    padding: 22px 26px;
+    background: rgba(10, 30, 60, 0.35);
+    backdrop-filter: blur(14px) saturate(150%);
+    border-radius: 18px;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.45),
+        inset 0 0 40px rgba(80, 160, 255, 0.06);
+    color: #e9f6ff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(.25,.8,.25,1);
+    z-index: 9999;
+    transform: translate(-50%, -50%) scale(0.92);
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 出现时（不改变动画逻辑，只切换视觉样式）*/
+.fish-card.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* 图像容器（使用 bio-image-box 命名以兼容 card_yy 的结构）*/
+.fish-card .bio-image-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    flex: 0 0 auto;
+}
+.fish-card .bio-image-box img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* 标题 */
+.fish-card h3 {
+    margin: 2px 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    flex: 0 0 auto;
+}
+
+/* 内容区：允许滚动 */
+.fish-card .bio-content {
+    overflow: auto;
+    padding-right: 6px; /* 给滚动条留空间 */
+    flex: 1 1 auto;
+}
+
+/* 小标题（subtitle）*/
+.fish-card .subtitle {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8ec9ff;
+    margin-bottom: 6px;
+    opacity: 0.95;
+}
+
+/* 段落文字 */
+.fish-card .bio-content p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #d9ebff;
+    white-space: pre-line;
+    margin-bottom: 8px;
+}
+
+/* 点击区域透明（不影响视觉） */
+.fish-hitbox {
+    position: absolute;
+    background: rgba(255,0,0,0); /* 完全透明 */
+    cursor: pointer;
+    z-index: 10; /* 确保点击区域在最上面 */
+}
+
+/* 小尺寸屏幕优化 */
+@media (max-width: 480px) {
+    .fish-card {
+        width: calc(100% - 32px);
+        left: 50%;
+        top: 50%;
+        padding: 16px;
+        border-radius: 14px;
+    }
+    .fish-card h3 { font-size: 18px; }
+    .fish-card .subtitle { font-size: 13px; }
+    .fish-card .bio-content p { font-size: 13px; }
+}
+
+/* 美化滚动条（可选） */
+.fish-card .bio-content::-webkit-scrollbar {
+    width: 8px;
+}
+.fish-card .bio-content::-webkit-scrollbar-thumb {
+    background: rgba(140, 201, 255, 0.18);
+    border-radius: 6px;
+}

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>浮游宇宙</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
+	<link rel="stylesheet" href="css/card_yy.css">
+	<link rel="stylesheet" href="css/scene1_intro.css">
+	<link rel="stylesheet" href="css/scene-info.css">
+  <link rel="stylesheet" href="css/collect.css">
+  <link rel="stylesheet" href="css/ending.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">
+    	<img src="img/Logo.png" alt="Logo">
+      <span>Ephemeral Universe</span>
+    </a>
+    <ul>
+      <li><a href="#" class="active">Top</a></li>
+      <li><a href="#" id="collectBtn">Collect</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </header>
+
+  <!-- ========== Scene 1 ========== -->
+  <section class="scene" id="scene1">
+    <img src="img/1-1/1-1-bg.png" data-speed="0.4" data-direction="y">
+    <img src="img/1-1/1-1-mid.png" data-speed="0.2" data-direction="y">
+    <img src="img/1-1/1-1-birds.png"data-init-x="-500" data-speed="0.3" data-direction="x">
+    <img src="img/1-1/1-1-LTleaves.png" data-speed="0.5"  data-direction="left-up">
+    <img src="img/1-1/1-1-RTleaves.png" data-speed="0.5"  data-direction="right-up">
+    <img src="img/1-1/1-1-LBleaves.png" data-speed="0.7" data-direction="left-down">
+    <img src="img/1-1/1-1-rock2.0.png"   data-init-x="0"data-speed="0" data-direction="y">
+        
+    <!-- ===== 新增首页介绍文字 ===== -->   
+    <div class="scene1-intro center-intro">
+        <h1 class="intro-title-cn">浮游宇宙</h1>
+        <h2 class="intro-title-en">Ephemeral Universe</h2>
+        <p class="intro-desc">
+            一场从海面到深渊的沉浸式下潜旅程。<br>
+            在光影与浮游之间，探索那些隐匿在深海中的生命碎片。
+        </p>
+        <button class="intro-start-btn" id="startExplore">开始探索</button>
+    </div>
+    
+  </section>
+  
+  <!-- ========== Scene 2 ========== -->  
+  <section class="scene" id="scene2">
+    <img src="img/1-2/1-2-bg.png" data-init-y="-200" data-speed="0.3" data-direction="y">
+    
+  	<!-- 日光层20-100m信息文字 -->
+		  <div class="scene-info2">
+		    <h2>日光层 (Epipelagic Zone)</h2>
+		    <p>这里是海洋的上层光照区，光线充足，是大部分海洋生物的栖息地。</p>
+		    <p>你可以看到鳞光闪烁的凤尾鱼、成群游动的沙丁鱼，它们在这里觅食、繁殖，构成生机勃勃的生态系统。</p>
+		  </div>
+  	
+    <img src="img/1-2/1-2-mid.png" data-scale="0.5" data-init-y="700" data-speed="-0.6" data-direction="y"data-stop-at="1000">
+    <img src="img/1-2/1-2-mid2.png"  data-scale="0.3" data-init-y="600" data-speed="-0.7" data-direction="y"data-stop-at="900">
+    <img src="img/1-2/1-2-mid3.png" data-init-y="450" data-speed="-0.5" data-direction="y"data-stop-at="900"> 
+		  <!-- 凤尾鱼（实际显示的图层） -->
+		  <img src="img/1-2/fish/fwy.png" data-init-x="150" data-speed="-0.2" data-direction="x" data-stop-at="750" class="fish" data-fish="fwy">
+		  <!-- 凤尾鱼透明点击区域 -->
+		  <div class="fish-hitbox"
+		       data-fish="fwy"
+		       style="
+		         position:absolute;
+		         top:500px;
+		         left:115px;
+		         width:515px;
+		         height:400px;
+		       ">
+		  </div>
+
+    	<!-- 沙丁鱼（实际显示的图层） -->
+      <img src="img/1-2/fish/sdy.png" data-init-x="300"data-speed="-0.4" data-direction="x"data-stop-at="750"  class="fish" data-fish="sdy">
+		  <!-- 沙丁鱼透明点击区域 -->
+		  <div class="fish-hitbox"
+		       data-fish="sdy"
+		       style="
+		         position:absolute;
+		         top:220px;
+		         right:120px;
+		         width:600px;
+		         height:420px;
+		       ">
+		  </div>
+		  
+    <img src="img/1-2/1-2-shanhu.png" data-init-y="0" data-speed="0" data-direction="y"data-stop-at="1000">
+    <img src="img/1-2/1-2-Trock2.0.png" data-init-y="-30" data-speed="0" data-direction="y"data-stop-at="500">
+	  
+  </section>
+  
+  <!-- ========== Scene 3 ========== -->  
+  <section class="scene" id="scene3">
+    <img src="img/1-3/1-3_bg.png" data-speed="0.01" data-direction="y">        
+    <img src="img/1-3/1-3_lm.png" data-init-x="-1050" data-speed="0.6" data-direction="x" data-stop-at="1750">
+    <img src="img/1-3/1-3_lmid.png" data-init-x="-612.5" data-speed="0.35" data-direction="x"data-stop-at="1750">
+    <img src="img/1-3/1-3_rm.png" data-init-x="1050"data-speed="-0.6" data-direction="x"data-stop-at="1750">
+    
+  	<!-- 日光层100-200m信息文字 -->
+		  <div class="scene-info3">
+		    <h2>日光层深区 (Epipelagic Zone)</h2>
+		    <p>光线稍微减弱，但仍是海洋中生命活跃的区域，水母、带鱼和鲭鱼群在此穿梭。</p>
+		    <p>透过海水的蓝光，你可以欣赏到奇妙的海底景观与群游的鱼类生态。</p>
+		  </div>       
+    
+    	<!-- 鲭鱼群（实际显示的图层） -->
+    	<img src="img/1-3/fish/qy.png" data-init-x="350"data-speed="-0.2" data-direction="x"data-stop-at="1750"  class="fish" data-fish="qy">
+    	  <!-- 鲭鱼群透明点击区域 -->
+		  <div class="fish-hitbox"
+		       data-fish="qy"
+		       style="
+		         position:absolute;
+		         top:200px;
+		         right:515px;
+		         width:400px;
+		         height:420px;
+		       ">
+		  </div>    	
+    	
+    <img src="img/1-3/1-3_rmid.png" data-init-x="612.5"data-speed="-0.35" data-direction="x"data-stop-at="1750">
+    
+    	<!-- 海月水母（实际显示的图层） -->
+    	<img src="img/1-3/fish/hysm.png" data-init-y="-350"data-speed="0.2" data-direction="y"data-stop-at="1750"  class="fish" data-fish="hysm">
+    	  <!-- 海月水母透明点击区域 -->
+		  <div class="fish-hitbox"
+		       data-fish="hysm"
+		       style="
+		         position:absolute;
+		         top:250px;
+		         left:115px;
+		         width:385px;
+		         height:400px;
+		       ">
+		  </div>    	
+    	
+    <img src="img/1-3/1-3_rocks.png" data-init-y="0"data-speed="0" data-direction="y"data-stop-at="1750">
+    
+    	<!-- 带鱼（实际显示的图层） -->
+    	<img src="img/1-3/fish/dy.png" data-init-x="1050"data-speed="-0.6" data-direction="x"data-stop-at="1750"  class="fish" data-fish="dy">
+    	  <!-- 带鱼透明点击区域 -->
+		  <div class="fish-hitbox"
+		       data-fish="dy"
+		       style="
+		         position:absolute;
+		         top:520px;
+		         right:200px;
+		         width:575px;
+		         height:320px;
+		       ">
+		  </div>    	
+    	
+  </section>
+  
+  <!-- ========== Scene 4 ========== -->
+  <section class="scene" id="scene4">
+    <img src="img/2-1/2-1-bg.png" data-speed="0.0" data-direction="y">
+    
+  	<!-- 暮色层200-500m信息文字 -->
+		<div class="scene-info4">
+		  <h2>暮色层(Twilight Layer)</h2>
+		  <p>这里是日光层下方，光线开始柔和，海水温度下降，是刺鳞鱼和对虾的活动区。</p>
+		  <p>刺鳞鱼缓慢游动，闪烁鳞片在光线中微微反射；对虾在岩石间穿梭，寻找食物和庇护。</p>
+		</div>    
+    
+    <img src="img/2-1/4_m3.png" data-init-y="700" data-speed="-0.3" data-direction="y"data-stop-at="2350">
+    <img src="img/2-1/4_m2.png" data-init-y="400" data-speed="-0.15" data-direction="y"data-stop-at="2300">
+    <img src="img/2-1/4_m1.png" data-init-y="300" data-speed="-0.10" data-direction="y"data-stop-at="2300">
+    <img src="img/2-1/2-1-light.png"data-init-x="-100" data-speed="0.001" data-fade="3"style="opacity: 0.5;"data-direction="x">    
+    <img src="img/2-1/4_r6.png" data-init-x="600"data-speed="-0.3" data-direction="x"data-stop-at="2000">
+    <img src="img/2-1/4_r5.png" data-init-x="500"data-speed="-0.25" data-direction="x"data-stop-at="2000">
+    <img src="img/2-1/4_r4.png" data-init-x="400"data-speed="-0.2" data-direction="x"data-stop-at="2000">
+    <img src="img/2-1/4_r3.png" data-init-x="300"data-speed="-0.15" data-direction="x"data-stop-at="2000">
+    <img src="img/2-1/4_r2.png" data-init-x="200"data-speed="-0.1" data-direction="x"data-stop-at="2000">
+    <img src="img/2-1/4_r1.png" data-speed="0.0" data-direction="y">
+    <img src="img/2-1/2-1-cliff.png" data-init-y="500"data-speed="-0.2" data-direction="y"data-stop-at="2500">
+    <img src="img/2-1/2-1-lmid.png"  data-init-x="-500"data-speed="0.2" data-direction="x"data-stop-at="2500">
+    <img src="img/2-1/2-1-rmid.png"  data-init-x="500"data-speed="-0.2" data-direction="x"data-stop-at="2500">
+    	<!-- 刺鳞鱼剪影 -->
+        <img src="img/2-1/fish/cly_yy.png" data-init-y="512"data-speed="-0.2" data-direction="y"data-stop-at="2560" class="bio-silhouette" data-bio="cly" alt="刺鳞鱼剪影">  
+      	
+      	<!-- 隐藏的完整刺鳞鱼图片 -->
+				<img src="img/2-1/fish/cly.png"
+				     class="bio-full-image" data-bio="cly-full" alt="刺鳞鱼实体图">
+      		
+      	<!-- 刺鳞鱼透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="cly"
+				     style="position:absolute; 
+				     left: 850px; 
+				     top: 350px; 
+				     width: 420px; 
+				     height: 285px;
+				     ">
+				</div>
+      
+      <!-- 对虾剪影 -->
+        <img src="img/2-1/fish/dx_yy.png" data-init-y="855"data-speed="-0.3" data-direction="y"data-stop-at="2850" class="bio-silhouette" data-bio="dx" alt="对虾剪影"> 
+        	
+        <!-- 隐藏的完整对虾图片 -->
+			  <img src="img/2-1/fish/dx.png"
+				   class="bio-full-image" data-bio="dx-full" alt="对虾鱼实体图">
+        <!-- 对虾透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="dx"
+				     style="position:absolute; 
+				     right: 1105px; 
+				     top: 455px; 
+				     width: 300px; 
+				     height: 320px;
+				     ">
+				</div>
+      
+    <img src="img/2-1/2-1-plant.png" data-init-y="300"data-speed="-0.1" data-direction="y"data-stop-at="3000">    
+
+  </section>
+  
+  <!-- ========== Scene 5 ========== --> 
+  <section class="scene" id="scene5">
+    <img src="img/2-2/5_bg.png" data-speed="0.0" data-direction="y">
+    
+  	<!-- 暮色层500-700m信息文字 -->
+		<div class="scene-info5">
+		  <h2>暮色层(Twilight Layer)</h2>
+		  <p>光线变得昏暗，这里是灯笼鱼、小型乌贼和管水母的世界。</p>
+		  <p>它们靠发光器官或微弱光线活动，营造出神秘的海底景象，捕食或避开天敌。</p>
+		</div>      
+    
+    <img src="img/2-2/5_m1.png"data-init-x="-1085"data-speed="0.31" data-direction="x"data-stop-at="3500">
+    <img src="img/2-2/5_m2.png" data-init-x="-525"data-speed="0.15" data-direction="x"data-stop-at="3500">
+    <img src="img/2-2/5_rock.png" data-init-x="1095"data-speed="-0.3" data-direction="x"data-stop-at="3650">
+    	<!-- 灯笼鱼剪影 -->
+    		<img src="img/2-2/fish/dly_yy.png" data-init-x="1050"data-speed="-0.3" data-direction="x"data-stop-at="3500" class="bio-silhouette" data-bio="dly" alt="灯笼鱼剪影">
+
+      	<!-- 隐藏的完整灯笼鱼图片 -->
+				<img src="img/2-2/fish/dly.png"
+				     class="bio-full-image" data-bio="dly-full" alt="灯笼鱼实体图">
+      		
+      	<!-- 灯笼鱼透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="dly"
+				     style="position:absolute; 
+				     left: 950px; 
+				     top: 670px; 
+				     width: 365px; 
+				     height: 285px;
+				     ">
+				</div>    		
+
+    	<!-- 小型乌贼剪影 -->
+    	  <img src="img/2-2/fish/xxwz_yy.png" data-init-y="730"data-speed="-0.2" data-direction="y"data-stop-at="3650" class="bio-silhouette" data-bio="xxwz" alt="小型乌贼剪影">
+    	  
+      	<!-- 隐藏的完整小型乌贼图片 -->
+				<img src="img/2-2/fish/xxwz.png"
+				     class="bio-full-image" data-bio="xxwz-full" alt="小型乌贼实体图">
+      		
+      	<!-- 小型乌贼透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="xxwz"
+				     style="position:absolute; 
+				     left: 950px; 
+				     top: 325px; 
+				     width: 385px; 
+				     height: 300px;
+				     ">
+				</div>  
+      
+       <!-- 管水母剪影 -->
+    	  <img src="img/2-2/fish/gsm_yy.png" data-init-y="730"data-speed="-0.2" data-direction="y"data-stop-at="3800" class="bio-silhouette" data-bio="gsm" alt="管水母剪影">
+    	  
+      	<!-- 隐藏的完整管水母图片 -->
+				<img src="img/2-2/fish/gsm.png"
+				     class="bio-full-image" data-bio="gsm-full" alt="管水母实体图">
+      		
+      	<!-- 管水母透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="gsm"
+				     style="position:absolute; 
+				     left: 50px; 
+				     top: 370px; 
+				     width: 405px; 
+				     height: 325px;
+				     ">
+				</div>      	  
+    	  
+    		<img src="img/2-2/fish/2-2hd.png" data-speed="0.0" data-direction="y">
+    		<img src="img/2-2/fish/2-2hx.png" data-speed="0.0" data-direction="y"> 	
+    		
+    <img src="img/2-2/5_qrock.png" data-init-y="652.5"data-speed="-0.15" data-direction="y"data-stop-at="4350">
+    <img src="img/2-2/5_rrock.png"data-init-y="652.5"data-speed="-0.15" data-direction="y"data-stop-at="4350">
+
+  </section>
+  
+   <!-- ========== Scene 6 ========== --> 
+  <section class="scene" id="scene6">
+    <img src="img/2-3/6_bg.png" data-speed="0.0" data-direction="y"> 
+    
+  	<!-- 暮色层700-1000m信息文字 -->
+		<div class="scene-info6">
+		  <h2>暮色层(Twilight Layer)</h2>
+		  <p>这里海水更深更冷，长尾鲨和巨枪乌贼是顶级掠食者。</p>
+		  <p>巨枪乌贼悄然潜行，长尾鲨灵活游动，形成层层捕食关系，保持生态平衡。</p>
+		</div>      
+    
+    <img src="img/2-3/6_l1.png" data-init-x="-510"data-speed="0.2" data-direction="x"data-start="1800"data-stop-at="2550">
+    <img src="img/2-3/6_l2.png" data-init-x="-1040"data-speed="0.4" data-direction="x"data-start="1800"data-stop-at="2600">
+    <img src="img/2-3/6_l3.png" data-init-x="-1650"data-speed="0.6" data-direction="x"data-start="1800"data-stop-at="2750">
+    <img src="img/2-3/6_r1.png" data-init-x="245"data-speed="-0.1" data-direction="x"data-start="1800"data-stop-at="2450">
+    <img src="img/2-3/6_r2.png" data-init-x="510"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="2550">
+    	<!-- 长尾鲨剪影 -->    
+        <img src="img/2-3/fish/cws_yy.png" data-init-x="510"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="2550" class="bio-silhouette" data-bio="cws" alt="长尾鲨剪影">	
+      		
+      	<!-- 隐藏的完整长尾鲨图片 -->
+				<img src="img/2-3/fish/cws.png"
+				     class="bio-full-image" data-bio="cws-full" alt="长尾鲨实体图">
+      		
+      	<!-- 长尾鲨透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="cws"
+				     style="position:absolute; 
+				     left: 625px; 
+				     top: 350px; 
+				     width: 465px; 
+				     height: 285px;
+				     ">
+				</div>        
+        
+    <img src="img/2-3/6_r3.png" data-init-x="1040"data-speed="-0.4" data-direction="x"data-start="1800"data-stop-at="2600">
+    <img src="img/2-3/6_r4.png" data-init-x="1650"data-speed="-0.6" data-direction="x"data-start="1800"data-stop-at="2750">
+    
+      <!-- 巨枪乌贼剪影 -->    
+        <img src="img/2-3/fish/dwwz_yy.png" data-init-x="-1650"data-speed="0.6" data-direction="x"data-start="1800"data-stop-at="2750" class="bio-silhouette" data-bio="dwwz" alt="巨枪乌贼剪影">>
+      	
+      	<!-- 隐藏的完整巨枪乌贼图片 -->
+				<img src="img/2-3/fish/dwwz.png"
+				     class="bio-full-image" data-bio="dwwz-full" alt="巨枪乌贼实体图">
+      		
+      	<!-- 巨枪乌贼透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="dwwz"
+				     style="position:absolute; 
+				     left: 50px; 
+				     top: 370px; 
+				     width: 405px; 
+				     height: 325px;
+				     ">
+				</div>            
+        
+  </section>
+  
+   <!-- ========== Scene 7 ========== --> 
+  <section class="scene" id="scene7">
+    <img src="img/3-1/7_bg.png" data-speed="0.0" data-direction="y">
+    
+  	<!-- 午夜层1000-2000m信息文字 -->
+		<div class="scene-info7">
+		  <h2>午夜层(Midnight Layer)</h2>
+		  <p>光线几乎完全消失，这里生活着盲虾、深海蛇鲭和深海海参。</p>
+		  <p>它们依靠触觉、嗅觉和微弱生物发光寻找食物与伙伴，海底世界静谧而神秘。</p>
+		</div>     
+    
+    <img src="img/3-1/7_light.png"data-init-x="-100" data-speed="0.001" data-fade="3"style="opacity: 0.5;"data-direction="x">   
+    <img src="img/3-1/7_soil.png" data-init-y="1695" data-speed="-0.3" data-direction="y"data-stop-at="5650">
+    <img src="img/3-1/7_lm.png" data-init-x="-1642.5"data-speed="0.45" data-direction="x"data-start="1800"data-stop-at="3650">
+    <img src="img/3-1/7_rm.png" data-init-x="710"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="3550">
+      <!-- 盲虾剪影 -->  
+        <img src="img/3-1/fish/mx_yy.png" data-init-x="-1440"data-speed="0.4" data-direction="x"data-start="1800"data-stop-at="3600" class="bio-silhouette" data-bio="mx" alt="盲虾剪影">
+      		
+      	<!-- 隐藏的完整盲虾图片 -->
+				<img src="img/3-1/fish/mx.png"
+				     class="bio-full-image" data-bio="mx-full" alt="长尾鲨实体图">
+      		
+      	<!-- 盲虾透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="mx"
+				     style="position:absolute; 
+				     left: 425px; 
+				     top: 340px; 
+				     width: 485px; 
+				     height: 175px;
+				     ">
+				</div>          
+        
+      <!-- 深海蛇鲭剪影 -->        
+        <img src="img/3-1/fish/shsq_yy.png" data-init-y="1350" data-speed="-0.25" data-direction="y"data-stop-at="5400"  class="bio-silhouette" data-bio="shsq" alt="深海蛇鲭剪影">
+      	
+      	<!-- 隐藏的完整深海蛇鲭图片 -->
+				<img src="img/3-1/fish/shsq.png"
+				     class="bio-full-image" data-bio="shsq-full" alt="深海蛇鲭实体图">
+      		
+      	<!-- 深海蛇鲭透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="shsq"
+				     style="position:absolute; 
+				     right: 355px; 
+				     top: 240px; 
+				     width: 480px; 
+				     height: 460px;
+				     ">
+				</div>   
+        
+      <!-- 深海海参剪影 -->        
+    		<img src="img/3-1/fish/shhs_yy.png" data-init-y="1695" data-speed="-0.3" data-direction="y"data-stop-at="5650"  class="bio-silhouette" data-bio="shhs" alt="深海海参剪影">
+      	
+      	<!-- 隐藏的完整深海海参图片 -->
+				<img src="img/3-1/fish/shhs.png"
+				     class="bio-full-image" data-bio="shhs-full" alt="深海海参实体图">
+      		
+      	<!-- 深海海参透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="shhs"
+				     style="position:absolute; 
+				     right: 365px; 
+				     top: 755px; 
+				     width: 480px; 
+				     height: 185px;
+				     ">
+				</div>     		
+    		
+    		
+    		<img src="img/3-1/fish/3-1hd.png" data-speed="0.0" data-direction="y">
+    		<img src="img/3-1/fish/3-1hx.png" data-speed="0.0" data-direction="y">
+
+  </section>
+  
+     <!-- ========== Scene 8 ========== --> 
+  <section class="scene" id="scene8">
+    <img src="img/3-2/8_bg.png" data-speed="0.0" data-direction="y">
+    
+  	<!-- 午夜层2000-3000m信息文字 -->
+		<div class="scene-info8">
+		  <h2>午夜层(Midnight Layer)</h2>
+		  <p>在完全黑暗的深海中，吞噬鳗和深海𩽾𩾌鱼使用发光和敏锐感官捕食猎物。</p>
+		  <p>它们缓慢巡游，保持能量消耗最小，同时在黑暗中创造独特的猎食技巧。</p>
+		</div>     
+    
+    <img src="img/3-2/8_light.png" data-init-x="-100" data-speed="0.001" data-fade="3"style="opacity: 0.5;"data-direction="x">   
+    <img src="img/3-2/8_lm.png" data-init-x="-1627.5"data-speed="0.35" data-direction="x"data-start="1800"data-stop-at="4650">
+    <img src="img/3-2/8_rm.png" data-init-x="930"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="4650">
+    	  
+    	  	
+    	<!-- 吞噬鳗剪影 --> 
+        <img src="img/3-2/fish/tsm_yy.png" data-init-x="920"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="4600" class="bio-silhouette" data-bio="tsm" alt="吞噬鳗剪影">
+      	
+      	<!-- 隐藏的完整吞噬鳗图片 -->
+				<img src="img/3-2/fish/tsm.png"
+				     class="bio-full-image" data-bio="tsm-full" alt="吞噬鳗实体图">
+      		
+      	<!-- 吞噬鳗透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="tsm"
+				     style="position:absolute; 
+				     right: 200px; 
+				     top: 65px; 
+				     width: 555px; 
+				     height: 285px;
+				     ">
+				</div>          
+        
+    <img src="img/3-2/8_mm.png" data-init-x="475"data-speed="-0.1" data-direction="x"data-start="1800"data-stop-at="4750">
+    <img src="img/3-2/8_lrock.png" data-init-y="1637.5" data-speed="-0.25" data-direction="y"data-stop-at="6650">
+    <img src="img/3-2/8_rrock.png" data-init-y="1637.5" data-speed="-0.25" data-direction="y"data-stop-at="6650">
+    
+    	<!-- 深海𩽾𩾌鱼剪影 -->     
+        <img src="img/3-2/fish/shaky_yy.png" data-init-y="1637.5" data-speed="-0.25" data-direction="y"data-stop-at="6550" class="bio-silhouette" data-bio="shaky" alt="深海𩽾𩾌鱼剪影">
+      	
+      	<!-- 隐藏的完整深海𩽾𩾌鱼图片 -->
+				<img src="img/3-2/fish/shaky.png"
+				     class="bio-full-image" data-bio="shaky-full" alt="深海𩽾𩾌鱼实体图">
+      		
+      	<!-- 深海𩽾𩾌鱼透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="shaky"
+				     style="position:absolute; 
+				     right: 25px; 
+				     top: 365px; 
+				     width: 625px; 
+				     height: 550px;
+				     ">
+				</div>         
+        
+  </section>
+  
+     <!-- ========== Scene 9 ========== --> 
+  <section class="scene" id="scene9">
+    <img src="img/3-3/9_bg.png" data-speed="0.0" data-direction="y">
+    
+  	<!-- 午夜层3000m+信息文字 -->
+		<div class="scene-info9">
+		  <h2>午夜层(Midnight Layer)</h2>
+		  <p>这是海洋最深的区域，几乎没有光线，雪人蟹、深海海胆、深海海星和巨型管虫在此栖息。</p>
+		  <p>生物们缓慢移动或固着在岩石上，利用微弱化学能或沉积物获取养分，展现深海独特生态。</p>
+		</div>       
+    
+    <img src="img/3-3/9_lm.png" data-init-x="-1960"data-speed="0.35" data-direction="x"data-start="1800"data-stop-at="5600">
+    <img src="img/3-3/9_rm.png" data-init-x="1120"data-speed="-0.2" data-direction="x"data-start="1800"data-stop-at="5600">
+    <img src="img/3-3/9_v1.png" data-init-y="2555" data-speed="-0.35" data-direction="y"data-stop-at="7300">
+    <img src="img/3-3/9_v2.png" data-init-y="1837.5" data-speed="-0.25" data-direction="y"data-stop-at="7350">
+    <img src="img/3-3/9_v3.png" data-speed="0.0" data-direction="y">
+    <img src="img/3-3/9_v4.png" data-speed="0.0" data-direction="y">
+    
+    	 <!-- 雪人蟹剪影 -->   
+        <img src="img/3-3/fish/xrx_yy.png" data-init-y="1837.5" data-speed="-0.25" data-direction="y"data-stop-at="7350" class="bio-silhouette" data-bio="xrx" alt="雪人蟹剪影">
+      	<!-- 隐藏的完整雪人蟹图片 -->
+				<img src="img/3-3/fish/xrx.png"
+				     class="bio-full-image" data-bio="xrx-full" alt="雪人蟹实体图">
+      		
+      	<!-- 雪人蟹透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="xrx"
+				     style="position:absolute; 
+				     right: 365px; 
+				     top: 625px; 
+				     width: 480px; 
+				     height: 205px;
+				     ">
+				</div>          
+        
+    	 <!-- 深海海胆剪影 -->        
+        <img src="img/3-3/fish/shhd_yy.png" data-speed="0.0" data-direction="y"  class="bio-silhouette" data-bio="shhd" alt="深海海胆剪影">
+      	<!-- 隐藏的完整深海海胆图片 -->
+				<img src="img/3-3/fish/shhd.png"
+				     class="bio-full-image" data-bio="shhd-full" alt="深海海胆实体图">
+      		
+      	<!-- 深海海胆透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="shhd"
+				     style="position:absolute; 
+				     left: 365px; 
+				     top: 625px; 
+				     width: 480px; 
+				     height: 205px;
+				     ">
+				</div>          
+        
+    	 <!-- 深海海星剪影 -->        
+        <img src="img/3-3/fish/shhx_yy.png" data-speed="0.0" data-direction="y"  class="bio-silhouette" data-bio="shhx" alt="深海海星剪影">
+      	<!-- 隐藏的完整深海海星图片 -->
+				<img src="img/3-3/fish/shhx.png"
+				     class="bio-full-image" data-bio="shhx-full" alt="深海海星实体图">
+      		
+      	<!-- 深海海星透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="shhx"
+				     style="position:absolute; 
+				     left: 495px; 
+				     top: 665px; 
+				     width: 480px; 
+				     height: 205px;
+				     ">
+				</div>        
+        
+        
+    <img src="img/3-3/9_lrock.png" data-init-x="-1437.5"data-speed="0.25" data-direction="x"data-start="1800"data-stop-at="5750">
+    <img src="img/3-3/9_rrock.png" data-init-y="1887.5" data-speed="-0.25" data-direction="y"data-stop-at="7550">
+    
+    	 <!-- 巨型管虫剪影 -->    
+    		<img src="img/3-3/fish/jxgc_yy.png" data-init-y="1887.5" data-speed="-0.25" data-direction="y"data-stop-at="7550"  class="bio-silhouette" data-bio="jxgc" alt="巨型管虫剪影">
+      	<!-- 隐藏的完整巨型管虫图片 -->
+				<img src="img/3-3/fish/jxgc.png"
+				     class="bio-full-image" data-bio="jxgc-full" alt="巨型管虫实体图">
+      		
+      	<!-- 巨型管虫透明点击热点 -->
+				<div class="bio-hotspot" 
+				     data-bio="jxgc"
+				     style="position:absolute; 
+				     right: 425px; 
+				     top: 675px; 
+				     width: 480px; 
+				     height: 125px;
+				     ">
+				</div>      		
+    		
+  </section>
+  
+		<!-- ========== Scene 10 ========== --> 
+	<section class="scene" id="scene10">
+    <img src="img/3-4/10_bg.png" data-speed="0.0" data-direction="y">
+      <!-- ★ 标题放在这里 -->
+  		<h2 class="scene-title">Explore The Deepest</h2>     
+    <img src="img/3-4/10_rock.png" data-init-y="-1540" data-speed="0.2" data-direction="y" data-stop-at="7700">
+    <img src="img/3-4/10_hlm.png" data-init-x="-2037.5" data-speed="0.25" data-direction="x" data-start="1800" data-stop-at="8150">
+    <img src="img/3-4/10_mlm.png" data-init-x="-2852.5" data-speed="0.35" data-direction="x" data-start="1800" data-stop-at="8150">
+    <img src="img/3-4/10_qlm.png" data-init-x="-1730" data-speed="0.2" data-direction="x" data-start="1800" data-stop-at="8150">
+    <img src="img/3-4/10_hrm.png" data-init-x="2037.5" data-speed="-0.25" data-direction="x" data-start="1800" data-stop-at="8150">
+    <img src="img/3-4/10_mrm.png" data-init-x="2852.5" data-speed="-0.35" data-direction="x" data-start="1800" data-stop-at="8150">
+    <img src="img/3-4/10_qrm.png" data-init-x="1730" data-speed="-0.2" data-direction="x" data-start="1800" data-stop-at="8150">
+
+    <!-- 蛟龙号开始跟着滚动往下动 -->
+		<img src="img/3-4/10_jlh.png"
+		     data-init-y="-262.5"
+		     data-speed="0.35"
+		     data-direction="y"
+		     data-start="8200"
+		     data-stop-at="775">
+   
+		 <!-- ========== Scene 10 Info Text ========== -->
+			<div class="scene-info scene-info-bottom" style="
+			     position: absolute;
+			     bottom: 50px;
+			     left: 50%;
+			     transform: translateX(-50%);
+			     width: 80%;
+			     max-width: 900px;
+			     background: rgba(0, 15, 30, 0.5);
+			     color: #E0F7FA;
+			     padding: 25px 35px;
+			     border-radius: 20px;
+			     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+			     text-align: center;
+			     font-family: 'Poppins', sans-serif;
+			     line-height: 1.6;
+			     backdrop-filter: blur(5px);
+			">
+			  <h2 style="font-size: 2rem; margin-bottom: 15px; color:#B3E5FC;">深海之境 (The Abyssal Realm)</h2>
+			  <p style="font-size: 1.1rem; margin-bottom: 15px;">
+			    人类对海洋的探索，从温暖的日光层到昏暗的中层，直至这无垠的深海底层，仍只触及冰山一角。
+			    这里黑暗、寒冷、压力巨大，却孕育着生命的奇迹——生物适应极端环境，悄然演化。
+			  </p>
+			  <p style="font-size: 1rem; font-style: italic; color:#81D4FA;">
+			    “海洋最深的角落，是人类眼睛所未及，但智慧与想象力可以抵达。”  
+			  </p>
+			</div>
+
+	</section>
+	
+	<!-- ========== 结束语部分 ========== -->
+	<section class="ending-section" id="ending">
+	  <div class="ending-container">
+	    <h1 class="ending-title">深海之境</h1>
+	    <h2 class="ending-subtitle">The Abyssal Realm</h2>
+	    
+	    <div class="ending-content">
+	    	
+	      <p class="ending-text">
+	                      从波光粼粼的海面到永恒的黑暗深渊，这场垂直旅程穿越了海洋的层层秘境。
+	      </p>
+	      
+	      <p class="ending-text">
+					海洋覆盖地球71%，人类探索却不足5%。
+	      </p>
+	      
+	      <p class="ending-text">
+					每一米下潜都是未知的挑战，每次发现都是生命极限的重新定义。深海中缓慢游动的生命，在高压低温无光中，诉说着最顽强的故事。
+	      </p>
+	      
+	      <p class="ending-text">
+					在海洋最深的黑暗中，我们找到了生命最耀眼的光芒。每一次下潜都是与远古的对话，每一次发现都是对未来的启示。
+	      </p>
+	    
+	    <div class="ending-quote">
+	      	剩下的95%，等待着你好奇心的光芒。
+	    </div>
+	    
+	    <div class="ending-stats">
+	      <div class="stat-item">
+	        <span class="stat-number">95%</span>
+	        <span class="stat-label">未探索</span>
+	      </div>
+	      <div class="stat-item">
+	        <span class="stat-number">11km</span>
+	        <span class="stat-label">最深处</span>
+	      </div>
+	      <div class="stat-item">
+	        <span class="stat-number">∞</span>
+	        <span class="stat-label">未知</span>
+	      </div>
+	    </div>
+	    
+	    <div class="ending-actions">
+	      <button class="ending-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+	        重新探索
+	      </button>
+	      <a href="about.html" class="ending-btn">
+	        了解更多
+	      </a>
+	    </div>
+	    
+	    <div class="ending-footer">
+	      <p>浮游宇宙 · Ephemeral Universe | 探索无止境</p>
+	    </div>
+	  </div>
+	</section>
+
+	
+		<!-- ========== 深度计ui(html) ========== -->   
+  <aside id="depth-gauge">
+	  <div class="depth-bar"></div>
+	  <div class="submarine"><img src="img/qst_tb.png" alt="潜水艇"></div>
+	  <ul class="depth-layers"></ul>
+	</aside>
+
+  
+<!-- ========== js逻辑效果部分 ========== -->   
+  <script>
+	window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  // 遍历所有场景
+  document.querySelectorAll('.scene').forEach(scene => {
+    const rect = scene.getBoundingClientRect();
+    const sceneTop = rect.top + scrollY;
+    const sceneBottom = sceneTop + rect.height;
+
+    // 判断当前是否在视口内（这里定义可视范围为中间区域）
+   const inView = scrollY + windowHeight > sceneTop - windowHeight * 0.2 &&
+               scrollY < sceneBottom + windowHeight * 0.2;
+
+
+    // 只有可视时才更新里面的图层
+    if (inView) {
+      const elements = scene.querySelectorAll('[data-speed]');
+      elements.forEach(el => {
+        const speed = parseFloat(el.dataset.speed) || 0;
+        const dir = el.dataset.direction || "y";
+        const start = parseFloat(el.dataset.start) || 0;
+        const scale = parseFloat(el.dataset.scale) || 0;
+        const fade = parseFloat(el.dataset.fade) || 0;
+        const initX = parseFloat(el.dataset.initX) || 0;
+        const initY = parseFloat(el.dataset.initY) || 0;
+        const stopAt = parseFloat(el.dataset.stopAt) || Infinity;
+
+        let offset = Math.max(0, scrollY - start);
+        offset = Math.min(offset, stopAt);
+
+        let x = initX, y = initY;
+
+        // 移动方向控制
+        if (dir.includes('left')) x -= offset * speed;
+        if (dir.includes('right')) x += offset * speed;
+        if (dir.includes('up')) y -= offset * speed;
+        if (dir.includes('down')) y += offset * speed;
+        if (dir === 'x') x += offset * speed;
+        if (dir === 'y') y += offset * speed;
+
+        // 缩放
+        const scaleFactor = 1 + offset * scale / 1000;
+        el.style.transform = `translate(${x}px, ${y}px) scale(${scaleFactor})`;
+
+        // ===== 淡入淡出控制 =====
+        if (fade) {
+          // 进入场景时，从透明 → 不透明
+          const fadeInStart = sceneTop - windowHeight * 0.5;
+          const fadeInEnd = sceneTop + rect.height * 0.3;
+          const fadeOutStart = sceneBottom - rect.height * 0.5;
+          const fadeOutEnd = sceneBottom;
+
+          let opacity = 1;
+
+          if (scrollY < fadeInStart) {
+            opacity = 0; // 未进入
+          } else if (scrollY >= fadeInStart && scrollY <= fadeInEnd) {
+            opacity = (scrollY - fadeInStart) / (fadeInEnd - fadeInStart); // 淡入
+          } else if (scrollY >= fadeOutStart && scrollY <= fadeOutEnd) {
+            opacity = 1 - (scrollY - fadeOutStart) / (fadeOutEnd - fadeOutStart); // 淡出
+          } else if (scrollY > fadeOutEnd) {
+            opacity = 0; // 完全离开
+          }
+
+          el.style.opacity = Math.max(0, Math.min(1, opacity));
+        }
+      });
+    }
+  });
+});
+
+// <!-- ========== 深度计ui(js) ========== -->   
+const LAYERS = [
+  { name: '海面 ↑', sectionId: 'scene1' },
+  { name: '日光层 20-100m', sectionId: 'scene2' },
+  { name: '日光层 100-200m', sectionId: 'scene3' },
+  { name: '暮色层 200-500m', sectionId: 'scene4' },
+  { name: '暮色层 500-700m', sectionId: 'scene5' },
+  { name: '暮色层 700-1000m', sectionId: 'scene6' },
+  { name: '午夜层 1000-2000m', sectionId: 'scene7' },
+  { name: '午夜层 2000-3000m', sectionId: 'scene8' },
+  { name: '午夜层 3000m+', sectionId: 'scene9' },
+  { name: '深渊地带 ∞', sectionId: 'scene10' }
+];
+
+// 获取 DOM 元素
+const gauge = document.getElementById('depth-gauge');
+const submarine = gauge.querySelector('.submarine');
+const layersUl = gauge.querySelector('.depth-layers');
+
+// 初始化文字列表并添加点击跳转
+LAYERS.forEach(layer => {
+  const li = document.createElement('li');
+  li.textContent = layer.name;
+  li.addEventListener('click', () => {
+    const section = document.getElementById(layer.sectionId);
+    if (section) {
+      window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+    }
+  });
+  layersUl.appendChild(li);
+});
+
+// 更新潜水艇位置和文字高亮
+function updateDepthGauge() {
+  const scrollY = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const gaugeHeight = gauge.clientHeight;
+  const submarineHeight = submarine.offsetHeight;
+
+  // 计算潜水艇位置（中心对齐）
+  let depthRatio = scrollY / docHeight;
+  depthRatio = Math.min(Math.max(depthRatio, 0), 1);
+  const depthY = depthRatio * (gaugeHeight - submarineHeight);
+  submarine.style.top = `${depthY}px`;
+
+  // 更新文字高亮
+  const layerItems = layersUl.querySelectorAll('li');
+  LAYERS.forEach((layer, index) => {
+    const section = document.getElementById(layer.sectionId);
+    if (!section) return;
+
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (scrollY >= sectionTop && scrollY < sectionBottom) {
+      layerItems[index].style.color = '#66d0ff';
+      layerItems[index].style.borderLeftColor = '#66d0ff';
+    } else {
+      layerItems[index].style.color = '#e4f6ff';
+      layerItems[index].style.borderLeftColor = 'transparent';
+    }
+  });
+}
+
+// 初始调用
+updateDepthGauge();
+
+// 绑定滚动事件
+window.addEventListener('scroll', updateDepthGauge);
+window.addEventListener('resize', updateDepthGauge); // 可选：窗口大小改变时重新计算
+
+</script>
+
+// <!-- ========== 信息卡片ui(js) ========== -->   
+<script src="js/card.js"></script>
+// <!-- ========== 剪影信息卡片ui(js) ========== -->   
+<script src="js/card_yy.js"></script>
+// <!-- ========== 收集图鉴ui(js) ========== -->   
+<script src="js/collect.js"></script>
+// <!-- ========== Ending结束ui(js) ========== -->   
+<script src="js/ending.js"></script>
+<!-- ========== 音频管理系统 ========== -->
+// <script src="js/audio-manager.js"></script>
+
+</body>
+</html>

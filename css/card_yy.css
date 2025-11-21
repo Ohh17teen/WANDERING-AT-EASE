@@ -1,0 +1,81 @@
+.bio-card {
+    position: fixed;
+    width: 420px;
+    max-width: 92%;
+    padding: 22px 26px;
+    background: rgba(10, 30, 60, 0.35);
+    backdrop-filter: blur(14px) saturate(150%);
+    border-radius: 18px;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+        0 8px 28px rgba(0, 0, 0, 0.45),
+        inset 0 0 40px rgba(80, 160, 255, 0.10);
+    color: #e9f6ff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 9999;
+}
+
+/* 默认隐藏位置 */
+.bio-card.right { top: 50%; right: -450px; transform: translateY(-50%) scale(0.92); }
+.bio-card.left { top: 50%; left: -450px; transform: translateY(-50%) scale(0.92); }
+.bio-card.top { top: -100%; left: 50%; transform: translateX(-50%) scale(0.92); }
+.bio-card.bottom { bottom: -100%; left: 50%; transform: translateX(-50%) scale(0.92); }
+
+/* 显示状态 */
+.bio-card.show.right { transform: translateY(-50%) scale(1); opacity: 1; pointer-events: auto; }
+.bio-card.show.left { transform: translateY(-50%) scale(1); opacity: 1; pointer-events: auto; }
+.bio-card.show.top { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
+.bio-card.show.bottom { transform: translateX(-50%) scale(1); opacity: 1; pointer-events: auto; }
+
+/* 大图 */
+.bio-card .bio-image-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+.bio-card .bio-image-box img { width: 100%; display: block; }
+
+.bio-card h3 {
+    margin: 2px 0 14px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.4px;
+}
+
+.bio-card .subtitle {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8ec9ff;
+    margin-bottom: 4px;
+    opacity: 0.9;
+}
+
+.bio-card p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #d9ebff;
+    white-space: pre-line;
+    margin-bottom: 6px;
+}
+
+.bio-full-image {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.45s ease;
+    z-index: 20;
+}
+
+.bio-hotspot {
+    position: absolute;
+    background: rgba(255, 0, 0, 0);
+    cursor: pointer;
+    z-index: 30;
+}

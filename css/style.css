@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b132b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+}
+
+/* Logo 容器 */
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;                 /* logo 和文字之间的距离 */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+/* Logo 图片 */
+header .logo img {
+  height: 55px;              /* ★ 自己调整：logo 显示高度 */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 英文名（可选：防止继承错乱） */
+header .logo span {
+  line-height: 1;
+  display: block;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+header ul li a.active,
+header ul li a:hover {
+  background: #fff;
+  color: #0b132b;
+}
+
+
+/* Scene Base */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.scene::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, #0b132b, transparent);
+  z-index: 50;
+}
+
+/* Scene Titles */
+.scene-title {
+  position: relative;
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.6);  
+  text-shadow: 0 0 15px rgba(255,255,255,5);
+}
+
+/* Scene10 容器 */
+#scene10 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2560 / 4096;
+  overflow: visible;
+}
+
+/* Scene10 图片缩放逻辑 */
+#scene10 img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 深度计ui实现css*/
+#depth-gauge {
+  position: fixed;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 450px;
+  z-index: 999;
+  padding: 0;
+  cursor: pointer;
+
+  background: linear-gradient(to bottom, #66d0ff 0%, #003b7a 50%, #000 100%);
+  border-radius: 30px;
+  border: 2px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 25px rgba(0,0,0,0.5),
+    inset 0 0 25px rgba(255,255,255,0.06);
+
+  transition: width .25s ease;
+}
+
+#depth-gauge:hover {
+  width: 180px;
+}
+
+/* 深度条背景 */
+.depth-bar {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  width: 8px;
+  height: calc(100% - 40px);
+  background: rgba(255,255,255,0.22);
+  border-radius: 4px;
+}
+
+/* 潜艇 */
+.submarine {
+  position: absolute;
+  left: 29px;
+
+  /* —— 调整大小 —— */
+  width: 125px; 
+
+  /* —— 调整中心点对齐 —— */
+  transform: translate(-50%, 0);
+
+  transition: top .25s ease, transform .25s ease;
+}
+
+.submarine img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
+}
+
+/* 深度层级文字列表 */
+.depth-layers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  left: 75px;
+  top: 10px;
+
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+#depth-gauge:hover .depth-layers {
+  opacity: 1;
+}
+
+.depth-layers li {
+  padding: 8px 0;
+  font-size: 13px;
+  color: #e4f6ff;
+  cursor: pointer;
+  white-space: nowrap;
+
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  border-left: 2px solid transparent;
+
+  transition: .2s ease;
+}
+
+.depth-layers li:hover {
+  color: #66d0ff;
+  border-left: 2px solid #66d0ff;
+  padding-left: 6px;
+}

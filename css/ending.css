@@ -1,0 +1,350 @@
+/* 结束语部分样式  */
+.ending-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 255px 0 20px; 
+}
+
+.ending-container {
+  position: relative;
+  width: 90%;
+  max-width: 850px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* 主标题 */
+.ending-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  margin-bottom: 5px; 
+  color: #e0f7fa;
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1.2s ease 0.3s forwards;
+}
+
+.ending-subtitle {
+  /* 🎯 修复：font-size 值 */
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: #b3e5fc;
+  margin-bottom: 120px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s ease 0.6s forwards;
+}
+
+/* 内容区域 */
+.ending-content {
+  max-width: 725px;
+  margin: 0 auto 70px;
+}
+
+.ending-text {
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.9;
+  color: #e0f7fa;
+  /* 🎯 调整：段落之间的间距 */
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* 🎯 调整：每个段落的动画延迟和间距 */
+.ending-text:nth-child(1) { 
+  animation: fadeInUp 1.2s ease 0.9s forwards; 
+  margin-bottom: 50px;
+}
+.ending-text:nth-child(2) { 
+  animation: fadeInUp 1.2s ease 1.2s forwards; 
+  margin-bottom: 50px;
+}
+.ending-text:nth-child(3) { 
+  animation: fadeInUp 1.2s ease 1.5s forwards; 
+  margin-bottom: 50px;
+}
+.ending-text:nth-child(4) { 
+  animation: fadeInUp 1.2s ease 1.8s forwards; 
+  margin-bottom: 70px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 引用部分 */
+.ending-quote {
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.8vw, 1.6rem);
+  color: #81d4fa;
+  text-align: center;
+  margin: 80px auto;
+  max-width: 650px;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease 2.1s forwards;
+}
+
+.ending-quote::before,
+.ending-quote::after {
+  content: '"';
+  font-size: 3.5rem;
+  color: #4fc3f7;
+  position: absolute;
+  opacity: 0.3;
+  font-style: normal;
+}
+
+.ending-quote::before {
+  top: -20px;
+  left: -35px;
+}
+
+.ending-quote::after {
+  bottom: -35px;
+  right: -35px;
+}
+
+/* 统计信息 - 网格布局 */
+.ending-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin: 80px auto;
+  max-width: 700px;
+}
+
+.stat-item {
+  background: rgba(2, 27, 52, 0.4);
+  padding: 30px 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(102, 208, 255, 0.2);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 1s ease 2.3s forwards;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
+  border-color: rgba(102, 208, 255, 0.4);
+  background: rgba(2, 27, 52, 0.6);
+}
+
+.stat-item:nth-child(2) { animation-delay: 2.5s; }
+.stat-item:nth-child(3) { animation-delay: 2.7s; }
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #66d0ff;
+  display: block;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(102, 208, 255, 0.3);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #b3e5fc;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+}
+
+/* 行动按钮 */
+.ending-actions {
+  margin-top: 80px;
+  opacity: 0;
+  animation: fadeIn 1s ease 3.1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.ending-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  margin: 0 20px;
+  color: #66d0ff;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 300;
+  font-size: 1.1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.ending-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #66d0ff;
+  transition: width 0.3s ease;
+}
+
+.ending-btn:hover::after {
+  width: 100%;
+}
+
+.ending-btn:hover {
+  color: #b3e5fc;
+  letter-spacing: 3px;
+}
+
+/* 页脚 */
+.ending-footer {
+  margin-top: 120px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(102, 208, 255, 0.1);
+  color: #81d4fa;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s ease 3.4s forwards;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .ending-section {
+    padding: 150px 0 60px;
+  }
+  
+  .ending-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 60px auto;
+  }
+  
+  .stat-item {
+    padding: 25px 20px;
+  }
+  
+  .stat-number {
+    font-size: 2.4rem;
+  }
+  
+  .ending-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .ending-btn {
+    margin: 5px 0;
+  }
+  
+  .ending-quote::before {
+    left: -15px;
+  }
+  
+  .ending-quote::after {
+    right: -15px;
+  }
+  
+  /* 🎯 调整：移动端段落间距 */
+  .ending-text {
+    margin-bottom: 40px;
+  }
+  
+  .ending-text:nth-child(1),
+  .ending-text:nth-child(2),
+  .ending-text:nth-child(3) {
+    margin-bottom: 40px;
+  }
+  
+  .ending-text:nth-child(4) {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ending-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 280px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .ending-title {
+    letter-spacing: 2px;
+  }
+  
+  .ending-subtitle {
+    letter-spacing: 2.5px;
+    margin-bottom: 80px;
+  }
+  
+  .ending-quote::before {
+    top: -15px;
+    left: -10px;
+    font-size: 2.5rem;
+  }
+  
+  .ending-quote::after {
+    bottom: -25px;
+    right: -10px;
+    font-size: 2.5rem;
+  }
+  
+  /* 🎯 调整：小屏幕段落间距 */
+  .ending-text {
+    margin-bottom: 35px;
+    line-height: 1.8;
+  }
+  
+  .ending-text:nth-child(1),
+  .ending-text:nth-child(2),
+  .ending-text:nth-child(3) {
+    margin-bottom: 35px;
+  }
+  
+  .ending-text:nth-child(4) {
+    margin-bottom: 45px;
+  }
+  
+  .ending-footer {
+    margin-top: 80px;
+    padding-top: 55px;
+  }
+}

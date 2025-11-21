@@ -1,0 +1,65 @@
+/* Scene1 介绍 UI */
+.scene1-intro {
+  position: absolute;
+  color: #fff;
+  z-index: 20;
+  max-width: 480px;
+  text-align: center;
+  pointer-events: auto;
+  animation: fadeIn 1.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* ★★★ 新增：整体居中定位 ★★★ */
+.center-intro {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro-title-cn {
+  position: relative;
+  font-size: 6vw;
+  z-index: 100;
+  text-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+
+.intro-title-en {
+  font-size: 22px;
+  font-weight: 330;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.intro-desc {
+  font-size: 17px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 26px;
+}
+
+.intro-start-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+}
+
+.intro-start-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(-50%, -40%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}

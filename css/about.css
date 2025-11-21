@@ -1,0 +1,788 @@
+/* about.css - About页面样式 */
+.about-container {
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse at center, #0a1128 0%, #06121f 50%, #030a15 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23006699" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  color: #fff;
+  overflow-x: hidden;
+  font-family: 'Noto Serif SC', serif;
+}
+
+/* 英雄区域 */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: 
+    linear-gradient(180deg, 
+      rgba(6, 18, 31, 0.9) 0%, 
+      rgba(10, 34, 64, 0.7) 50%,
+      rgba(6, 18, 31, 0.9) 100%),
+    radial-gradient(ellipse at 50% 0%, rgba(102, 208, 255, 0.1) 0%, transparent 70%);
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #66d0ff;
+  margin-bottom: 1.5rem;
+  text-shadow: 
+    0 0 30px rgba(102, 208, 255, 0.5),
+    0 0 60px rgba(102, 208, 255, 0.3);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: #b3e5fc;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.hero-divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #66d0ff, transparent);
+  margin: 3rem auto;
+  position: relative;
+}
+
+.hero-divider::before,
+.hero-divider::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #66d0ff;
+  font-size: 1.2rem;
+}
+
+.hero-divider::before {
+  left: -25px;
+}
+
+.hero-divider::after {
+  right: -25px;
+}
+
+.hero-desc {
+  font-size: 1.4rem;
+  color: #e0f7fa;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* 浮动粒子背景 */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.floating-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #66d0ff, transparent);
+  opacity: 0.6;
+  filter: blur(1px);
+  animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle-1 {
+  width: 10px;
+  height: 10px;
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 15px;
+  height: 15px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.particle-3 {
+  width: 8px;
+  height: 8px;
+  bottom: 30%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+.particle-4 {
+  width: 12px;
+  height: 12px;
+  top: 40%;
+  right: 30%;
+  animation-delay: 6s;
+}
+
+.particle-5 {
+  width: 12px;
+  height: 12px;
+  top: 55%;
+  left: 18%;
+  animation-delay: 3s;
+}
+
+.particle-6 {
+  width: 18px;
+  height: 18px;
+  top: 25%;
+  right: 6%;
+  animation-delay: 6s;
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px);
+    opacity: 0.5;
+  }
+}
+
+/* 通用区域样式 */
+.about-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #66d0ff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(102, 208, 255, 0.3);
+}
+
+.section-divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #66d0ff, transparent);
+  margin: 0 auto;
+}
+
+/* 创作理念区域 */
+.creative-concept {
+  background: 
+    linear-gradient(180deg, 
+      rgba(6, 18, 31, 0.95) 0%,
+      rgba(10, 34, 64, 0.8) 100%);
+}
+
+.concept-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.concept-intro {
+  font-size: 1.3rem;
+  color: #b3e5fc;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.concept-content {
+  display: grid;
+  gap: 60px;
+}
+
+.main-concept {
+  background: linear-gradient(135deg, rgba(102, 208, 255, 0.1), rgba(102, 208, 255, 0.05));
+  border: 1px solid rgba(102, 208, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-concept::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 208, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.main-concept:hover::before {
+  left: 100%;
+}
+
+.concept-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.main-concept h3 {
+  font-size: 2rem;
+  color: #66d0ff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.main-concept p {
+  font-size: 1.2rem;
+  color: #e0f7fa;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.concept-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(102, 208, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.concept-item:hover {
+  transform: translateY(-10px);
+  border-color: #66d0ff;
+  box-shadow: 0 15px 40px rgba(102, 208, 255, 0.1);
+  background: rgba(102, 208, 255, 0.05);
+}
+
+.item-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.concept-item h4 {
+  font-size: 1.4rem;
+  color: #66d0ff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.concept-item p {
+  color: #b3e5fc;
+  line-height: 1.6;
+}
+
+/* 科普使命区域 */
+.science-mission {
+  background: 
+    radial-gradient(ellipse at 50% 100%, rgba(10, 34, 64, 0.8) 0%, transparent 70%);
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* 左边图片区域 */
+.mission-visual {
+  position: relative;
+}
+
+.mission-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(102, 208, 255, 0.2);
+  background: linear-gradient(135deg, rgba(102, 208, 255, 0.1), rgba(79, 195, 247, 0.05));
+}
+
+.mission-img {
+  width: 100%;
+  height: 525px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.mission-image:hover .mission-img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(6, 18, 31, 0.1) 50%,
+    rgba(6, 18, 31, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mission-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content h3 {
+  color: #66d0ff;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.overlay-content p {
+  color: #e0f7fa;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.image-caption p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* 右边文字区域 */
+.mission-text {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.mission-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(102, 208, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-point::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 208, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.mission-point:hover::before {
+  left: 100%;
+}
+
+.mission-point:hover {
+  background: rgba(102, 208, 255, 0.05);
+  border-color: rgba(102, 208, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.point-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.point-content {
+  flex: 1;
+}
+
+.mission-point h3 {
+  font-size: 1.4rem;
+  color: #66d0ff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.mission-point p {
+  color: #e0f7fa;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .mission-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .mission-img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-content {
+    gap: 40px;
+  }
+  
+  .mission-point {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .point-icon {
+    margin-top: 0;
+  }
+  
+  .mission-img {
+    height: 300px;
+  }
+}
+
+/* 数字海洋区域 */
+.ocean-facts {
+  background: linear-gradient(180deg, rgba(10, 34, 64, 0.8), rgba(6, 18, 31, 0.9));
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.fact-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(102, 208, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #66d0ff, #4fc3f7, #66d0ff);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.fact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  background: rgba(102, 208, 255, 0.05);
+}
+
+.fact-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #66d0ff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(102, 208, 255, 0.3);
+}
+
+.fact-label {
+  font-size: 1.2rem;
+  color: #b3e5fc;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.fact-desc {
+  color: #e0f7fa;
+  line-height: 1.5;
+}
+
+/* 哲思区域 */
+.philosophical {
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(102, 208, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(6, 18, 31, 0.9), rgba(3, 10, 21, 0.95));
+  text-align: center;
+}
+
+.philosophical-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-mark {
+  font-size: 6rem;
+  color: rgba(102, 208, 255, 0.3);
+  position: absolute;
+  font-family: serif;
+}
+
+.quote-mark.start {
+  top: -30px;
+  left: -50px;
+}
+
+.quote-mark.end {
+  bottom: -60px;
+  right: -50px;
+}
+
+.philosophical-quote {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #e0f7fa;
+  margin: 4rem 0;
+  font-style: italic;
+  text-align: left;
+}
+
+.philosophical-quote p {
+  margin-bottom: 2rem;
+}
+
+.closing-thought {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: rgba(102, 208, 255, 0.05);
+  border-radius: 15px;
+  border-left: 4px solid #66d0ff;
+}
+
+.closing-thought p {
+  font-size: 1.2rem;
+  color: #b3e5fc;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* 行动召唤 */
+.call-to-action {
+  background: linear-gradient(135deg, #0a1128, #06121f);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: #66d0ff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: #b3e5fc;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #66d0ff, #4fc3f7);
+  color: #0a1128;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(102, 208, 255, 0.3);
+}
+
+/* 页脚 */
+.about-footer {
+  background: rgba(3, 10, 21, 0.95);
+  padding: 60px 0 40px;
+  border-top: 1px solid rgba(102, 208, 255, 0.2);
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-logo span {
+  font-size: 1.5rem;
+  color: #66d0ff;
+  font-weight: 600;
+}
+
+.footer-text {
+  color: #b3e5fc;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #66d0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #b3e5fc;
+}
+
+.divider {
+  color: #66d0ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mission-visual {
+    height: 300px;
+  }
+  
+  .depth-layers {
+    width: 150px;
+    height: 300px;
+  }
+  
+  .quote-mark.start {
+    left: -20px;
+  }
+  
+  .quote-mark.end {
+    right: -20px;
+  }
+  
+  .philosophical-quote {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-concept {
+    padding: 30px 20px;
+  }
+}
